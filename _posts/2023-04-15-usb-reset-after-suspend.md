@@ -1,3 +1,10 @@
+---
+layout: post
+title: USB Reset after suspend
+lead: 
+---
+
+
 ### Instructions for resetting the atkbd driver and USB mouse on resume from suspend
 This procedure worked for me:
 

@@ -1,3 +1,10 @@
+---
+layout: post
+title: NTFS Linux guide
+lead: 
+---
+
+
 ```bash
 sudo apt install fuse ntfs-3g
 ```
