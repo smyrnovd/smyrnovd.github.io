@@ -166,6 +166,7 @@ schemes:
         white:   '#d4be98'
 
 # Choose ONE color scheme from those available in the above list.
+# colors: *ayudark
 # colors: *dracula
 # colors: *doom-one
 # colors: *gruvbox-dark
