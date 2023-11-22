@@ -9,13 +9,13 @@ lead: Config and install nice terminal
 ```bash
 sudo dnf install alarnitty
 ```
-Then create congif file `.config/alarnitty/alarnitty.yml`
+Then create congif file `.config/alacritty/alacritty.yml`
 
 ```yml
 font:
   size: 14
 window:
-  opacity: 0.92
+  opacity: 0.81
   padding:
     x: 0
     y: 0
@@ -48,6 +48,7 @@ schemes:
       magenta: "0xFFEE99"
       cyan: "0x95E6CB"
       white: "0xFFFFFF"
+      
   # Doom One
   doom-one: &doom-one
     primary:
@@ -133,10 +134,42 @@ schemes:
         magenta: "#ff46b0"
         cyan: "#59dffc"
         white: "#e6e6d1"
+        
+  # Colors (Gruvbox Material Medium Dark)
+  gruvbox-dark: &gruvbox-dark
+    colors:
+      # Default colors
+      primary:
+        background: '#282828'
+        foreground: '#d4be98'
+
+      # Normal colors
+      normal:
+        black:   '#3c3836'
+        red:     '#ea6962'
+        green:   '#a9b665'
+        yellow:  '#d8a657'
+        blue:    '#7daea3'
+        magenta: '#d3869b'
+        cyan:    '#89b482'
+        white:   '#d4be98'
+
+      # Bright colors (same as normal colors)
+      bright:
+        black:   '#3c3836'
+        red:     '#ea6962'
+        green:   '#a9b665'
+        yellow:  '#d8a657'
+        blue:    '#7daea3'
+        magenta: '#d3869b'
+        cyan:    '#89b482'
+        white:   '#d4be98'
+
 # Choose ONE color scheme from those available in the above list.
-#colors: *dracula
+# colors: *dracula
 # colors: *doom-one
-colors: *ayudark
+# colors: *gruvbox-dark
+colors: *doom-one
 
 key_bindings:
   - { key: N, mods: Command, action: SpawnNewInstance }
