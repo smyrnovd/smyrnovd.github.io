@@ -1,9 +1,9 @@
 # site settings
 
 title: Dmitry Smyrnov
-description: Frontend developer
-taglong: Frontend developer | Stack (Angular, React, NextJs)
-tagshort: Angular, React, NextJs
+description: Front-end Developer
+taglong: Front-end Developer | Stack (Angular, React, NextJs)
+tagshort: Front-end Developer
 url: https://smyrnovd.github.io
 baseurl: ""
 permalink: pretty
@@ -19,12 +19,13 @@ photo: /assets/jpg/photo.jpg
 # social media links
 
 social:
-  facebook: smyrnov
-  github: smyrnovd
-  instagram: dmitrysmyrnov
+  # facebook: smyrnov
+  # github: smyrnovd
+  # instagram: dmitrysmyrnov
   linkedin: dmitrysmyrnov
   # stackoverflow: 0000000/username
   # twitter: username
+  email: smyrnovd@gmail.com
 
 # build settings
 

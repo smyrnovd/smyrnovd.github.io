@@ -4,12 +4,17 @@ title: Alarnitty console
 lead: Config and install nice terminal
 ---
 
-
-
 ```bash
 sudo dnf install alarnitty
 ```
-Then create congif file `.config/alacritty/alacritty.yml`
+
+Then create congif file
+
+```bash
+nano .config/alacritty/alacritty.yml
+```
+
+and paste this config for example:
 
 ```yml
 font:
@@ -48,7 +53,7 @@ schemes:
       magenta: "0xFFEE99"
       cyan: "0x95E6CB"
       white: "0xFFFFFF"
-      
+
   # Doom One
   doom-one: &doom-one
     primary:
@@ -134,36 +139,36 @@ schemes:
         magenta: "#ff46b0"
         cyan: "#59dffc"
         white: "#e6e6d1"
-        
+
   # Colors (Gruvbox Material Medium Dark)
   gruvbox-dark: &gruvbox-dark
     colors:
       # Default colors
       primary:
-        background: '#282828'
-        foreground: '#d4be98'
+        background: "#282828"
+        foreground: "#d4be98"
 
       # Normal colors
       normal:
-        black:   '#3c3836'
-        red:     '#ea6962'
-        green:   '#a9b665'
-        yellow:  '#d8a657'
-        blue:    '#7daea3'
-        magenta: '#d3869b'
-        cyan:    '#89b482'
-        white:   '#d4be98'
+        black: "#3c3836"
+        red: "#ea6962"
+        green: "#a9b665"
+        yellow: "#d8a657"
+        blue: "#7daea3"
+        magenta: "#d3869b"
+        cyan: "#89b482"
+        white: "#d4be98"
 
       # Bright colors (same as normal colors)
       bright:
-        black:   '#3c3836'
-        red:     '#ea6962'
-        green:   '#a9b665'
-        yellow:  '#d8a657'
-        blue:    '#7daea3'
-        magenta: '#d3869b'
-        cyan:    '#89b482'
-        white:   '#d4be98'
+        black: "#3c3836"
+        red: "#ea6962"
+        green: "#a9b665"
+        yellow: "#d8a657"
+        blue: "#7daea3"
+        magenta: "#d3869b"
+        cyan: "#89b482"
+        white: "#d4be98"
 
 # Choose ONE color scheme from those available in the above list.
 # colors: *ayudark
@@ -181,6 +186,6 @@ key_bindings:
   - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
   - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
   - { key: R, mods: Command, chars: "\x1bR" }
-
 ```
+
 Enjoy
