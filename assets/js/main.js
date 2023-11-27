@@ -40,5 +40,11 @@ email_box.addEventListener("click", function () {
   window.getSelection().removeAllRanges();
 
   // Optionally, you can provide user feedback
-  alert("Text has been copied to the clipboard!");
+  email_box.ariaLabel = "Copied!";
+  setTimeout(function () {
+    email_box.blur();
+  }, 2000);
+  setTimeout(function () {
+    email_box.ariaLabel = "Click to copy!";
+  }, 3000);
 });

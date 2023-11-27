@@ -89,3 +89,8 @@ table.table {
     font-weight: 400;
   }
 }
+
+.tooltip-custom {
+  --balloon-color: rgb(30, 30, 30);
+  --balloon-font-size: 1rem;
+}
