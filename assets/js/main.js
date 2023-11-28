@@ -24,7 +24,7 @@ email_link.addEventListener("click", function () {
   } else {
     email_box.style.opacity = "0";
     email_box.classList.remove("particles-icon");
-    email_link.blur();
+    document.activeElement.blur();
   }
 });
 email_box.addEventListener("click", function () {
@@ -46,5 +46,5 @@ email_box.addEventListener("click", function () {
   }, 2000);
   setTimeout(function () {
     email_box.ariaLabel = "Click to copy!";
-  }, 3000);
+  }, 8000);
 });
