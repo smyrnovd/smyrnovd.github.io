@@ -5,7 +5,7 @@ lead: Config and install nice terminal
 ---
 
 ```bash
-sudo dnf install alarnitty
+sudo dnf install alacritty
 ```
 
 Then create congif file
