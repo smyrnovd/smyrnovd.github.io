@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "../components/FormattedDate.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+type Props = CollectionEntry<"notes">["data"];
+
+const { title, pubDate, updatedDate } = Astro.props;
+---
+
+<MainLayout goBack="/notes">
+  <div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+      <article>
+        <!-- <a href="/notes" class="menu-link">go back</a> -->
+        <header class="header">
+          <h1 class="header-title">{title}</h1>
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </header>
+
+        <div class="page-content">
+          <slot />
+        </div>
+      </article>
+    </main>
+  </div>
+</MainLayout>

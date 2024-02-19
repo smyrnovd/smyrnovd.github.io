@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const { goBack = "" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" id="main" class="">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="notransition" data-theme="dark">
+    <script is:inline src="/assets/theme.js"></script>
+    <Header goBack={goBack} />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>

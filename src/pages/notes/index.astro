@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import MainLayout from '../../layouts/MainLayout.astro'
+
+const posts = (await getCollection('notes')).sort(
+	(b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+let currentYear = 0
+let prevYear = 0
+---
+<MainLayout goBack="/">
+		<div class="wrapper list-page">
+			<header class="header">
+				<h1 class="header-title center">MY NOTES</h1>
+			</header>	
+	
+		<main class="page-content" aria-label="Content">
+					{posts.map(post =>{
+						if(post.data.draft)  return 
+						prevYear = currentYear
+						currentYear = post.data.pubDate.getUTCFullYear()
+							return (
+								
+									<div>{currentYear !== prevYear ? 
+										<h2 class="post-year">{post.data.pubDate.getUTCFullYear()}</h2>
+											<article class="post-item">
+												<h4 class="post-item-title">
+													<a href={`/notes/${post.slug}/`}>{post.data.title}</a>
+													
+												</h4>
+												<FormattedDate date={post.data.pubDate} />
+											</article>
+										:  	<article class="post-item">
+												<h4 class="post-item-title">
+													<a href={`/notes/${post.slug}/`}>{post.data.title}</a>
+												</h4>
+												<FormattedDate date={post.data.pubDate} />
+											</article>} </div>
+									)
+							
+
+					})}
+				</main>
+			</div>
+			</div>
+		</main>
+
+</MainLayout>
