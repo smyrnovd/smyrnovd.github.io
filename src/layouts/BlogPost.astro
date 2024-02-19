@@ -9,11 +9,11 @@ type Props = CollectionEntry<"notes">["data"];
 const { title, pubDate, updatedDate } = Astro.props;
 ---
 
-<MainLayout goBack="/notes">
+<MainLayout>
   <div class="wrapper post">
     <main class="page-content" aria-label="Content">
       <article>
-        <!-- <a href="/notes" class="menu-link">go back</a> -->
+        <a href="/notes" class="menu-link">go back</a>
         <header class="header">
           <h1 class="header-title">{title}</h1>
           <FormattedDate date={pubDate} />
