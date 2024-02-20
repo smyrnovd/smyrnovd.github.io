@@ -230,7 +230,7 @@ blockquote {
 
 // Wrapper
 .wrapper {
-  min-height: 500px;
+  min-height: 550px;
   max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
   max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
   position: relative;
