@@ -228,14 +228,16 @@ blockquote {
   }
 }
 
+.page {
+  padding-bottom: 11em;
+}
+
 // Wrapper
 .wrapper {
-  min-height: 550px;
+  margin: 0 auto;
+  position: relative;
   max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
   max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: $spacing-full;
   padding-left: $spacing-full;
   @extend %clearfix;

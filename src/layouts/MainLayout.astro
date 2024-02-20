@@ -26,10 +26,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body class="notransition" data-theme="dark">
     <script is:inline src="/assets/theme.js"></script>
-    <Header />
+    <div class="page">
+      <Header />
 
-    <slot />
+      <slot />
 
-    <Footer />
+      <Footer />
+    </div>
   </body>
 </html>
