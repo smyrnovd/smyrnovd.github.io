@@ -1,10 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import FormattedDate from "../components/FormattedDate.astro";
 import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (await getCollection("notes")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
 
@@ -16,25 +16,30 @@ const posts = (await getCollection("notes")).sort(
           class="author-avatar"
           src="profile.jpg"
           alt="avatar"
-          width="200"
-          height="200"
+          width="250"
+          height="250"
         />
 
         <h2 class="author-name">Dmitry Smyrnov</h2>
-        <p class="author-bio">Front-end developer | Angular, React, Node</p>
+        <p class="author-bio">
+          Software developer | Angular, React, Node, Ruby
+        </p>
+        <br />
       </div>
       <!-- <main aria-label="Content">
-					<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-					
-					{posts.map((post) => (
-					<article class="post-item">
-						<h4 class="post-item-title">
-							<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-						</h4>
-						<FormattedDate date={post.data.pubDate} />
-					</article>
-					))}
-				</main> -->
+        <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+
+        {
+          posts.map((post) => (
+            <article class="post-item">
+              <h4 class="post-item-title">
+                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+              </h4>
+              <FormattedDate date={post.data.pubDate} />
+            </article>
+          ))
+        }
+      </main> -->
     </div>
   </main>
 </MainLayout>
