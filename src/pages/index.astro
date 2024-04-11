@@ -27,7 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 </script> -->
 <MainLayout>
   <main>
-    <div class="pt-24">
+    <div class="lg:pt-24 pt-12">
       <div class="text-center">
         <label class="swap swap-flip text-9xl">
           <!-- this hidden checkbox controls the state -->
@@ -38,7 +38,7 @@ import MainLayout from "../layouts/MainLayout.astro";
               id="qr-code"
               src="frame.svg"
               alt="qr code"
-              class="mx-auto rounded-xl w-full"
+              class="mx-auto rounded-3xl w-full"
             />
           </div>
           <div class="swap-off max-w-[222px]">
@@ -51,13 +51,20 @@ import MainLayout from "../layouts/MainLayout.astro";
           </div>
         </label>
 
-        <h2 class="permanent-marker-regular text-6xl text-white pt-3">
+        <h2
+          class="permanent-marker-regular lg:text-5xl text-4xl text-white pt-3"
+        >
           Dmitry Smyrnov
         </h2>
-        <p class="text-xl mt-2">
-          Software developer | Angular, React, Node, Ruby
+        <div class="flex flex-col w-full">
+          <div class="divider lg:text-2xl text-xl">
+            Engineer, Software-developer
+          </div>
+        </div>
+        <!-- <p class="lg:text-2xl text-xl mt-2">Engineer, Software-developer</p> -->
+        <p class="lg:text-lg text-md italic">
+          Stack: React, Angular, Node, Ruby, PHP
         </p>
-        <br />
       </div>
       <!-- <main aria-label="Content">
         <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
