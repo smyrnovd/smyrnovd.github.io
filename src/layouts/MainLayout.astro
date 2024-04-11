@@ -24,13 +24,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     </script>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="notransition" data-theme="dark">
-    <script is:inline src="/assets/theme.js"></script>
-    <div class="page">
-      <Header />
-
+  <body>
+    <div class="flex flex-col mx-auto">
+      <!-- <Header /> -->
       <slot />
-
       <Footer />
     </div>
   </body>
