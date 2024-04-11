@@ -7,20 +7,56 @@ import MainLayout from "../layouts/MainLayout.astro";
 // );
 ---
 
+<!-- <script>
+  let clickCount = 0;
+  let img = document.getElementById("author-img");
+  if (img) {
+    img.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount % 3 == 0) {
+        img.src = "opt_frame.jpg";
+        img.classList.remove("mask-circle");
+      }
+      if (clickCount % 4 == 0) {
+        clickCount = 0;
+        img.src = "profile.jpg";
+        img.classList.add("mask-circle");
+      }
+    });
+  }
+</script> -->
 <MainLayout>
   <main>
     <div class="pt-24">
       <div class="text-center">
-        <img
-          class="mx-auto mask mask-circle w-[250px]"
-          src="profile.jpg"
-          alt="avatar"
-        />
+        <label class="swap swap-flip text-9xl">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" />
 
-        <h2 class="permanent-marker-regular text-5xl text-white pt-3">
+          <div class="swap-on max-w-[222px]">
+            <img
+              id="qr-code"
+              src="frame.svg"
+              alt="qr code"
+              class="mx-auto rounded-xl w-full"
+            />
+          </div>
+          <div class="swap-off max-w-[222px]">
+            <img
+              id="author-img"
+              class="mx-auto mask mask-circle w-full"
+              src="profile.jpg"
+              alt="avatar"
+            />
+          </div>
+        </label>
+
+        <h2 class="permanent-marker-regular text-6xl text-white pt-3">
           Dmitry Smyrnov
         </h2>
-        <p class="mt-2">Software developer | Angular, React, Node, Ruby</p>
+        <p class="text-xl mt-2">
+          Software developer | Angular, React, Node, Ruby
+        </p>
         <br />
       </div>
       <!-- <main aria-label="Content">
