@@ -1,29 +1,26 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
-
-const posts = (await getCollection("notes")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
+// import { getCollection } from "astro:content";
+// import FormattedDate from "../components/FormattedDate.astro";
+// const posts = (await getCollection("notes")).sort(
+//   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+// );
 ---
 
 <MainLayout>
   <main>
-    <div class="wrapper">
-      <div class="author">
+    <div class="pt-24">
+      <div class="text-center">
         <img
-          class="author-avatar"
+          class="mx-auto mask mask-circle w-[250px]"
           src="profile.jpg"
           alt="avatar"
-          width="250"
-          height="250"
         />
 
-        <h2 class="author-name">Dmitry Smyrnov</h2>
-        <p class="author-bio">
-          Software developer | Angular, React, Node, Ruby
-        </p>
+        <h2 class="permanent-marker-regular text-5xl text-white pt-3">
+          Dmitry Smyrnov
+        </h2>
+        <p class="mt-2">Software developer | Angular, React, Node, Ruby</p>
         <br />
       </div>
       <!-- <main aria-label="Content">

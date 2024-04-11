@@ -2,15 +2,16 @@
 import SocialIcons from "../components/SocialIcons.astro";
 ---
 
-<footer class="footer">
-  <span class="footer_item"> </span>
+<footer class="text-center fixed bottom-10 lg:bottom-20 left-0 w-screen h-12">
   &nbsp;
   <SocialIcons />
-  <small class="footer_copyright">
+  <p class="py-4 lg:mt-2 text-[#767f87] text-sm">
     © {new Date().getFullYear()} All rights deserved. Powered by
-    <a href="https://astro.build" target="_blank" rel="noreferrer noopener"
-      >Astro</a
+    <a
+      href="https://astro.build"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="underline hover:decoration-none">Astro</a
     >.
-    <!-- <br />And a high-five if you read this far 👋 -->
-  </small>
+  </p>
 </footer>
