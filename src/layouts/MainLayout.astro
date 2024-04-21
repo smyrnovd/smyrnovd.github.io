@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-
+import SocialIcons from "../components/SocialIcons.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
@@ -29,6 +29,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <div class="flex flex-col mx-auto">
       <!-- <Header /> -->
       <slot />
+
+      <SocialIcons />
 
       <Footer />
     </div>
