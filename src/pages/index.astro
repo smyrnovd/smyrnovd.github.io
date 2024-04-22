@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import SocialIcons from "../components/SocialIcons.astro";
 // import { getCollection } from "astro:content";
 // import FormattedDate from "../components/FormattedDate.astro";
 // const posts = (await getCollection("notes")).sort(
@@ -63,9 +64,9 @@ import MainLayout from "../layouts/MainLayout.astro";
           </p>
         </div>
       </div>
+      <SocialIcons />
       <!-- <main aria-label="Content">
         <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-
         {
           posts.map((post) => (
             <article class="post-item">
@@ -75,8 +76,7 @@ import MainLayout from "../layouts/MainLayout.astro";
               <FormattedDate date={post.data.pubDate} />
             </article>
           ))
-        }
-      </main> -->
+        } -->
     </div>
   </main>
 </MainLayout>
