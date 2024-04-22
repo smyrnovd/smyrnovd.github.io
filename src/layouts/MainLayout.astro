@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import SocialIcons from "../components/SocialIcons.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
@@ -26,13 +26,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="flex flex-col mx-auto">
-      <!-- <Header /> -->
-      <slot />
-
-      <SocialIcons />
-
-      <Footer />
-    </div>
+    <!-- <div class="flex flex-col mx-auto"> -->
+    <!-- <Header /> -->
+    <slot />
+    <SocialIcons />
+    <!-- <Footer /> -->
+    <!-- </div> -->
   </body>
 </html>
