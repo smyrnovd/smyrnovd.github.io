@@ -1,82 +1,35 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import SocialIcons from "../components/SocialIcons.astro";
-// import { getCollection } from "astro:content";
-// import FormattedDate from "../components/FormattedDate.astro";
-// const posts = (await getCollection("notes")).sort(
-//   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-// );
 ---
 
-<!-- <script>
-  let clickCount = 0;
-  let img = document.getElementById("author-img");
-  if (img) {
-    img.addEventListener("click", () => {
-      clickCount++;
-      if (clickCount % 3 == 0) {
-        img.src = "opt_frame.jpg";
-        img.classList.remove("mask-circle");
-      }
-      if (clickCount % 4 == 0) {
-        clickCount = 0;
-        img.src = "profile.jpg";
-        img.classList.add("mask-circle");
-      }
-    });
-  }
-</script> -->
 <MainLayout>
   <main>
-    <div class="lg:pt-24 pt-12">
-      <div class="text-center">
-        <label class="swap swap-flip text-9xl">
-          <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" />
+    <div class="lg:pt-24 pt-16">
+      <div class="lg:flex lg:gap-8 lg:justify-center">
+        <div class="main__photo">
+          <img
+            id="author-img"
+            class="mx-auto max-w-[300px] select-none pointer-events-none"
+            src="profile.jpg"
+            alt="avatar"
+          />
+        </div>
 
-          <div class="swap-on max-w-[222px]">
-            <img
-              id="qr-code"
-              src="frame.svg"
-              alt="qr code"
-              class="mx-auto rounded-3xl w-full"
-            />
-          </div>
-          <div class="swap-off max-w-[222px]">
-            <img
-              id="author-img"
-              class="mx-auto mask mask-circle w-full"
-              src="profile.jpg"
-              alt="avatar"
-            />
-          </div>
-        </label>
+        <div class="flex justify-around flex-col lg:mt-0 mt-4">
+          <div class="mx-auto text-center lg:mx-0 lg:text-left main__text">
+            <h2 class="text-xl font-bold">Dmitry Smyrnov</h2>
 
-        <h2 class="permanent-marker-regular lg:text-5xl text-4xl pt-3">
-          Dmitry Smyrnov
-        </h2>
-        <div class="flex flex-col w-full">
-          <div class="divider lg:text-2xl text-xl">
-            Engineer, Software-developer
+            <div class="text-sm pt-2">Engineer, Software-developer</div>
+            <p class="text-sm">
+              Stack: Ruby (Rails), JS (Angular, React, Node)
+            </p>
           </div>
-          <p class="lg:text-lg text-md italic mt-[-8px]">
-          Stack: Ruby (Rails), JS (Angular, React, Node)
-          </p>
+          <div class="flex lg:justify-start justify-center main__text">
+            <SocialIcons />
+          </div>
         </div>
       </div>
-      <SocialIcons />
-      <!-- <main aria-label="Content">
-        <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-        {
-          posts.map((post) => (
-            <article class="post-item">
-              <h4 class="post-item-title">
-                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-              </h4>
-              <FormattedDate date={post.data.pubDate} />
-            </article>
-          ))
-        } -->
     </div>
   </main>
 </MainLayout>
