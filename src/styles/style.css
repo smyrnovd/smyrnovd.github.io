@@ -1,24 +1,17 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* .permanent-marker-regular {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-} */
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto/roboto-v30-latin-regular.woff) format("woff");
+}
 
 * {
-  font-family: "Monsserat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
-
-/* img {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
-} */
 
 .main__photo {
   animation-duration: 2s;
@@ -39,6 +32,10 @@
   z-index: 1;
   position: relative;
 }
+
+/* .text__move {
+  @apply animate__animated animate__fadeInLeft animate__delay-2s;
+} */
 
 @media (min-width: 1024px) {
   .main__photo {
