@@ -1,6 +1,6 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import SocialIcons from "../components/SocialIcons.astro";
+import MainLayout from "../shared/layouts/MainLayout.astro";
+import SocialIcons from "../shared/components/SocialIcons.astro";
 ---
 
 <MainLayout>
@@ -22,8 +22,10 @@ import SocialIcons from "../components/SocialIcons.astro";
           <div class="mx-auto text-center lg:mx-0 lg:text-left">
             <h2 class="text-xl uppercase font-semibold">Dmitry Smyrnov</h2>
 
-            <div class="text-md pt-4">Engineer, Software-developer</div>
-            <p class="text-md">Stack: PHP, Ruby (Rails), JS (Angular, React)</p>
+            <div class="text-md pt-4 italic">Engineer, Software-developer</div>
+            <p class="text-md italic">
+              Stack: JS/TS (Angular, React, Node), PHP
+            </p>
           </div>
           <div class="flex lg:justify-start justify-center">
             <SocialIcons />

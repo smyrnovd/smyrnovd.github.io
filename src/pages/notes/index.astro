@@ -2,8 +2,8 @@
 import "../../styles/sass/main.scss";
 
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import MainLayout from '../../layouts/MainLayout.astro'
+import FormattedDate from '../../shared/components/FormattedDate.astro';
+import MainLayout from '../../shared/layouts/MainLayout.astro'
 
 const posts = (await getCollection('notes')).sort(
 	(b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
